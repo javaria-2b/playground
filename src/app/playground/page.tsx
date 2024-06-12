@@ -18,42 +18,132 @@ export default function Component() {
               </Button>
             </div>
           </div>
-          <div className="space-y-6">
-            <div className="space-y-2">
-            <Label htmlFor="mode">Mode</Label>
-            <div className="flex justify-between">
-              <ListIcon className="h-5 w-5" />
-              <DownloadIcon className="h-5 w-5" />
-              <ViewIcon className="h-5 w-5" />
-            </div>
-            </div>   
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="model">Model</Label>
-                <Select>
-                  <SelectTrigger id="model">
-                    <SelectValue placeholder="text-davinci-003" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="text-davinci-003">text-davinci-003</SelectItem>
-                    <SelectItem value="text-curie-004">text-curie-004</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="temperature">Temperature</Label>
-                <Input id="temperature" type="range" min="0" max="1" step="0.01" defaultValue="0.56" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="max-length">Maximum Length</Label>
-                <Input id="max-length" type="range" min="1" max="512" step="1" defaultValue="256" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="top-p">Top P</Label>
-                <Input id="top-p" type="range" min="0" max="1" step="0.01" defaultValue="0.9" />
-              </div>
-            </div>
+          <div className="w-full mx-auto space-y-4 py-8">
+        {/* <h2 className="text-2xl font-bold">Contact Us</h2> */}
+              <form className="space-y-4">
+        <div className="grid grid-cols-1 gap-4">
+          <div className="space-y-1.5">
+            <Label htmlFor="keywords">Keywords:</Label>
+            <Input id="keywords"/>
           </div>
+          <div className="space-y-1.5">
+            <Label htmlFor="platform">Platform</Label>
+            <Select >
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select platform" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="twitter">Twitter</SelectItem>
+                <SelectItem value="reddit">Reddit</SelectItem>
+                <SelectItem value="linkedin">Linkedin</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="result">Number of Results:</Label>
+            <Input id="result" />
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="location">Location (optional):</Label>
+            <Input id="location"/>
+          </div>
+          
+          <div className="space-y-1.5">
+            <Label htmlFor="device">Device:</Label>
+            <Select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select platform" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="desktop">Desktop</SelectItem>
+                <SelectItem value="mobile">Mobile</SelectItem>
+                <SelectItem value="tablet">Tablet</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="language">Language:</Label>
+            <Input id="language"/>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="country">Country:</Label>
+            <Input id="country"/>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="safesearch">Safe Search:</Label>
+            <Select>
+              <SelectTrigger className="w-full">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="off">Off</SelectItem>
+                <SelectItem value="active">Active</SelectItem>
+                <SelectItem value="medium">Medium</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="time range">Time Range:</Label>
+            <Select>
+              <SelectTrigger className="w-full">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="any-time">Any Time</SelectItem>
+                <SelectItem value="past-hour">Past Hour</SelectItem>
+                <SelectItem value="past-day">Past Day</SelectItem>
+                <SelectItem value="any-week">Past Week</SelectItem>
+                <SelectItem value="past-month">Past Month</SelectItem>
+                <SelectItem value="past-year">Past Year</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="sort by">Sort By:</Label>
+            <Select>
+              <SelectTrigger className="w-full">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="relevance">Relevance</SelectItem>
+                <SelectItem value="date">Date</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="negative-keywords">Negative Keywords::</Label>
+            <Input id="negative keywords"/>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="sort by">Sort By:</Label>
+            <Select>
+              <SelectTrigger className="w-full">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="any">Any</SelectItem>
+                <SelectItem value="title">Title</SelectItem>
+                <SelectItem value="url">URL</SelectItem>
+                <SelectItem value="anchor-text">Anchor Text</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+        </div>
+        <Button type="submit" className="w-full">
+          Search
+        </Button>
+      </form>
+    </div>
         </div>
       </div>
     </div>
